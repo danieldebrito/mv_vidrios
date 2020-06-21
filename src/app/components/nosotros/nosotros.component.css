@@ -158,7 +158,7 @@ footer .glyphicon {
 }
 
 .slideanim {
-    visibility: hidden;
+    height: 100%;
 }
 
 .slide {
