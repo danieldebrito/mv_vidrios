@@ -207,3 +207,8 @@ footer .glyphicon {
         font-size: 150px;
     }
 }
+
+.responsive {
+    max-width: 100%;
+    height: auto;
+}
