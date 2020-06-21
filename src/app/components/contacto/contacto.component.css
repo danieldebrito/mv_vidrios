@@ -213,3 +213,18 @@ footer .glyphicon {
         font-size: 150px;
     }
 }
+
+a:link {
+    color: #818181;
+    text-decoration: none
+}
+
+a:hover {
+    color: red;
+    text-decoration: none
+}
+
+a:visited {
+    color: blue;
+    text-decoration: none
+}

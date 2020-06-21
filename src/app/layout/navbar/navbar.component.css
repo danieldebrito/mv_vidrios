@@ -13,7 +13,7 @@
     right: 0;
     z-index: 2;
     /* font-weight: bold; */
-    background-color: #A8DADC;
+    background-color: #293241;
 }
 
 .dropdown {
@@ -52,13 +52,14 @@
 }
 
 .nav-link {
-    color: #293241 !important;
+    color: #EE6C4D !important;
+    font-weight: bold;
 }
 
 a:hover {
-    text-shadow: 1px 1px 0 #3D5A80;
+    text-shadow: 1px 1px 0 grey;
 }
 
 .active {
-    background-color: #A8DADC;
+    background-color: #293241;
 }

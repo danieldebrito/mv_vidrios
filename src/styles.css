@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+
+.bgd_celeste {
+    background-color: #98C1D9;
+}
+
+.bgd_celeste_claro {
+    background-color: #E0FBFC;
+}
+
+.bgd_naranja {
+    background-color: #EE6C4D;
+}
+
+.bgd_azul {
+    background-color: #293241;
+}
+
+.bgd_celeste_oscuro {
+    background-color: #3D5A80;
+}
