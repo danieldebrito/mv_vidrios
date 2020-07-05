@@ -7,12 +7,14 @@ import { ContactoComponent } from './components/contacto/contacto.component';
 import { NosotrosComponent } from './components/nosotros/nosotros.component';
 import { TrabajosComponent } from './components/trabajos/trabajos.component';
 import { ServiciosComponent } from './components/servicios/servicios.component';
+import { ContacBoardComponent } from './components/control/contac-board/contac-board.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'nosotros', component: NosotrosComponent },
   { path: 'trabajos', component: TrabajosComponent },
   { path: 'servicios', component: ServiciosComponent },
+  { path: 'control', component: ContacBoardComponent },
   { path: 'contacto', component: ContactoComponent },
   {
     path: '',

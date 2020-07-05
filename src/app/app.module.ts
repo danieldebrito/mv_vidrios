@@ -12,8 +12,10 @@ import { ContactoComponent } from './components/contacto/contacto.component';
 import { NosotrosComponent } from './components/nosotros/nosotros.component';
 import { TrabajosComponent } from './components/trabajos/trabajos.component';
 import { ServiciosComponent } from './components/servicios/servicios.component';
-
-
+import { ContacBoardComponent } from './components/control/contac-board/contac-board.component';
+import { MensajeVistaComponent } from './components/control/mensaje-vista/mensaje-vista.component';
+import { SideBarComponent } from './components/control/side-bar/side-bar.component';
+import { SideBarItemComponent } from './components/control/side-bar-item/side-bar-item.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +26,11 @@ import { ServiciosComponent } from './components/servicios/servicios.component';
     ContactoComponent,
     NosotrosComponent,
     TrabajosComponent,
-    ServiciosComponent
+    ServiciosComponent,
+    ContacBoardComponent,
+    MensajeVistaComponent,
+    SideBarComponent,
+    SideBarItemComponent,
   ],
   imports: [
     BrowserModule,

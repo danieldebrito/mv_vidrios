@@ -1,0 +1,26 @@
+<div class="">
+    <div id="mySidebar" class="sidebar">
+        <a>
+            <div id="main" *ngIf="!flat">
+                <button class="openbtn" (click)="closeNav()">☰ Cerrar</button>
+            </div>
+        </a>
+
+        <ul>
+            <li>
+                <hr>
+                <app-side-bar-item></app-side-bar-item>
+                <hr>
+            </li>
+            <li>
+                <hr>
+                <app-side-bar-item></app-side-bar-item>
+                <hr>
+            </li>
+        </ul>
+    </div>
+
+    <div id="main" *ngIf="flat">
+        <button class="openbtn" (click)="openNav()">☰ Ver Mensajes</button>
+    </div>
+</div>
