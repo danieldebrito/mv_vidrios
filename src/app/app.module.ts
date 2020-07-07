@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +17,8 @@ import { ContacBoardComponent } from './components/control/contac-board/contac-b
 import { MensajeVistaComponent } from './components/control/mensaje-vista/mensaje-vista.component';
 import { SideBarComponent } from './components/control/side-bar/side-bar.component';
 import { SideBarItemComponent } from './components/control/side-bar-item/side-bar-item.component';
+import { LoginComponent } from './components/control/login/login.component';
+import { ErrorLoginComponent } from './components/control/error-login/error-login.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,11 +34,14 @@ import { SideBarItemComponent } from './components/control/side-bar-item/side-ba
     MensajeVistaComponent,
     SideBarComponent,
     SideBarItemComponent,
+    LoginComponent,
+    ErrorLoginComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

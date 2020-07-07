@@ -1,5 +1,5 @@
 <div class="">
-    <div id="mySidebar" class="sidebar">
+    <div id="mySidebar" class="sidebar mt-3">
         <a>
             <div id="main" *ngIf="!flat">
                 <button class="openbtn" (click)="closeNav()">☰ Cerrar</button>
@@ -9,6 +9,7 @@
         <ul>
             <li>
                 <hr>
+                <a routerLink="\home"></a>
                 <app-side-bar-item></app-side-bar-item>
                 <hr>
             </li>

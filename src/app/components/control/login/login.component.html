@@ -1,0 +1,35 @@
+<div class="row p-3">
+    <div class="col-sm-4">
+        <h2>
+            Ingreso de <br>Administrador
+        </h2>
+    </div>
+    <div class="col-sm-4">
+        <form [formGroup]="loginForm" (ngSubmit)="loguear()">
+            <div class="imgcontainer">
+                <img src="assets/logo.png" alt="Avatar" class="avatar">
+            </div>
+
+            <div class="container">
+                <label for="uname"><b>Usuario</b></label>
+                <input type="text" placeholder="Ingresá el Usuario" name="uname" formControlName="email" required>
+
+                <label for="psw"><b>Contraseña</b></label>
+                <input type="password" placeholder="Ingresá la Contraseña" name="psw" formControlName="password" required>
+
+                <button type="submit">Entrar</button>
+                <label>
+              <input type="checkbox" checked="checked" name="remember"> Recordar en esta Maquina
+            </label>
+            </div>
+
+            <div class="container bgd_azul">
+                <button type="button" class="cancelbtn">Cancelar</button>
+                <span class="psw"> <a href="#">  ¿ Olvidaste tu clave ? </a></span>
+            </div>
+
+        </form>
+    </div>
+    <div class="col-sm-4">
+    </div>
+</div>

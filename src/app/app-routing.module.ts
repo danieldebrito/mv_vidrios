@@ -8,14 +8,18 @@ import { NosotrosComponent } from './components/nosotros/nosotros.component';
 import { TrabajosComponent } from './components/trabajos/trabajos.component';
 import { ServiciosComponent } from './components/servicios/servicios.component';
 import { ContacBoardComponent } from './components/control/contac-board/contac-board.component';
+import { LoginComponent } from './components/control/login/login.component';
+import { ErrorLoginComponent } from './components/control/error-login/error-login.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'nosotros', component: NosotrosComponent },
   { path: 'trabajos', component: TrabajosComponent },
   { path: 'servicios', component: ServiciosComponent },
-  { path: 'control', component: ContacBoardComponent },
+  { path: 'control', component: LoginComponent },
+  { path: 'cpanel', component: ContacBoardComponent },
   { path: 'contacto', component: ContactoComponent },
+  { path: 'errorLogin', component: ErrorLoginComponent },
   {
     path: '',
     redirectTo: '/home',
