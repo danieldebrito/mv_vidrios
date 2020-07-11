@@ -13,9 +13,8 @@ export class BaseHTTPService {
     // this.urlBase = 'http://juntasmeyro.000webhostapp.com/api/index.php';
 
     // localhost
-    this.urlBase = 'http://localhost/api_myr_web/app/index.php';
+    this.urlBase = ' http://localhost/api_mv/app/index.php';
   }
-
 
   public httpGetP( url: string) {
     return this.http

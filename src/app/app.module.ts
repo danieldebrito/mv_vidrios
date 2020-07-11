@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,6 +20,7 @@ import { SideBarComponent } from './components/control/side-bar/side-bar.compone
 import { SideBarItemComponent } from './components/control/side-bar-item/side-bar-item.component';
 import { LoginComponent } from './components/control/login/login.component';
 import { ErrorLoginComponent } from './components/control/error-login/error-login.component';
+import { GraciasComponent } from './components/control/gracias/gracias.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,10 +38,12 @@ import { ErrorLoginComponent } from './components/control/error-login/error-logi
     SideBarItemComponent,
     LoginComponent,
     ErrorLoginComponent,
+    GraciasComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     FormsModule,
     ReactiveFormsModule
   ],

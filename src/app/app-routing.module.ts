@@ -10,6 +10,7 @@ import { ServiciosComponent } from './components/servicios/servicios.component';
 import { ContacBoardComponent } from './components/control/contac-board/contac-board.component';
 import { LoginComponent } from './components/control/login/login.component';
 import { ErrorLoginComponent } from './components/control/error-login/error-login.component';
+import { GraciasComponent } from './components/control/gracias/gracias.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: 'control', component: LoginComponent },
   { path: 'cpanel', component: ContacBoardComponent },
   { path: 'contacto', component: ContactoComponent },
+  { path: 'gracias', component: GraciasComponent },
   { path: 'errorLogin', component: ErrorLoginComponent },
   {
     path: '',
