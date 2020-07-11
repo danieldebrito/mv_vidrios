@@ -1,3 +1,12 @@
-<app-side-bar></app-side-bar>
+<div id="mySidenav" class="sidenav mt-2">
+    <a href="javascript:void(0)" (click)="closeNav()">&#9776;  Close</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Clients</a>
+    <a href="#">Contact</a>
+</div>
 
-<app-mensaje-vista></app-mensaje-vista>
+<div id="main">
+    <span style="font-size:30px;cursor:pointer" (click)="openNav()">&#9776; open</span>
+    <app-mensaje-vista></app-mensaje-vista>
+</div>

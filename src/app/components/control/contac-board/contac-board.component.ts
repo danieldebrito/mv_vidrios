@@ -16,6 +16,16 @@ export class ContacBoardComponent implements OnInit {
 
   constructor( private mensajeSrvc: MensajesService) { }
 
+  public openNav() {
+    document.getElementById('mySidenav').style.width = '350px';
+    document.getElementById('main').style.marginLeft = '350px';
+  }
+
+  public closeNav() {
+    document.getElementById('mySidenav').style.width = '0';
+    document.getElementById('main').style.marginLeft = '0';
+  }
+
   listar() {
     this.mensajeSrvc.Listar().subscribe(response => {
       this.mensajes = response;
