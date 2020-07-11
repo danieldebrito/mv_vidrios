@@ -16,7 +16,6 @@ import { TrabajosComponent } from './components/trabajos/trabajos.component';
 import { ServiciosComponent } from './components/servicios/servicios.component';
 import { ContacBoardComponent } from './components/control/contac-board/contac-board.component';
 import { MensajeVistaComponent } from './components/control/mensaje-vista/mensaje-vista.component';
-import { SideBarComponent } from './components/control/side-bar/side-bar.component';
 import { SideBarItemComponent } from './components/control/side-bar-item/side-bar-item.component';
 import { LoginComponent } from './components/control/login/login.component';
 import { ErrorLoginComponent } from './components/control/error-login/error-login.component';
@@ -34,7 +33,6 @@ import { GraciasComponent } from './components/control/gracias/gracias.component
     ServiciosComponent,
     ContacBoardComponent,
     MensajeVistaComponent,
-    SideBarComponent,
     SideBarItemComponent,
     LoginComponent,
     ErrorLoginComponent,

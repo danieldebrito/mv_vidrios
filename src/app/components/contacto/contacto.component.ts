@@ -22,8 +22,9 @@ export class ContactoComponent implements OnInit {
   public altaMensaje() {
 
     const { nombre, email, telefono, mensaje } = this.contactForm.value;
+    const fecha = this.mensajeSrvc.getfecha();
 
-    this.mensajeSrvc.Alta( nombre, email, telefono, mensaje, 'no_leido')
+    this.mensajeSrvc.Alta( fecha, nombre, email, telefono, mensaje, 'no_leido' )
     .then(
       response => {
         this.router.navigate(['gracias']);  //  redirecciona

@@ -1,12 +1,14 @@
 <div id="mySidenav" class="sidenav mt-2">
-    <a href="javascript:void(0)" (click)="closeNav()">&#9776;  Close</a>
-    <a href="#">About</a>
-    <a href="#">Services</a>
-    <a href="#">Clients</a>
-    <a href="#">Contact</a>
+    <a href="javascript:void(0)" (click)="closeNav()">&#9776;  Cerrar Menu</a>
+    <ul>
+        <li *ngFor="let item of mensajes">
+            <app-side-bar-item [mensaje]="item"></app-side-bar-item>
+            <hr>
+        </li>
+    </ul>
 </div>
 
 <div id="main">
-    <span style="font-size:30px;cursor:pointer" (click)="openNav()">&#9776; open</span>
+    <span style="font-size:30px;cursor:pointer" (click)="openNav()">&#9776; Abrir Menu</span>
     <app-mensaje-vista></app-mensaje-vista>
 </div>

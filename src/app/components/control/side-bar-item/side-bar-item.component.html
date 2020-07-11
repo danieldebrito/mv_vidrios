@@ -1,31 +1,30 @@
-<div class="container">
-    <table>
-        <tr>
-            <th>
-                <a routerLink="\home">
-                    <div class="der">
-                        05-02-2020
-                    </div>
-                </a>
-            </th>
-            <th>
-                <div>
-                    <ul class="list-unstyled">
-                        <li>
-                            <i class="fa fa-trash"></i>
-                            <i class="fa fa-envelope"></i>
-                            <i class="fa fa-envelope-open"></i>
-                        </li>
-                    </ul>
+<table>
+    <tr>
+        <th>
+            <a routerLink="\home">
+                <div class="der">
+                    {{ mensaje.fecha }}
                 </div>
-            </th>
-        </tr>
-        <tr>
-            <td>
-                <a routerLink="\home">
-                    Juan Perez <br> juanperez@mail.com
+            </a>
+        </th>
+        <th>
+            <div>
+                <ul class="list-unstyled">
+                    <li>
+                        <button type="button" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>
+                        <button *ngIf="leido" type="button" class="btn btn-success btn-sm"><i class="fa fa-envelope"></i></button>
+                        <button *ngIf="noleido" type="button" class="btn btn-primary btn-sm"><i class="fa fa-envelope-open"></i></button>
+
+                    </li>
+                </ul>
+            </div>
+        </th>
+    </tr>
+    <tr>
+        <td>
+            <a routerLink="\home">
+                    {{ mensaje.nombre }} <br> {{ mensaje.email }}
                 </a>
-            </td>
-        </tr>
-    </table>
-</div>
+        </td>
+    </tr>
+</table>

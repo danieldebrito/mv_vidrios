@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MensajesService } from 'src/app/services/mensajes.service';
 import { Observable } from 'rxjs';
 import { Mensaje } from 'src/app/clases/mensaje';
@@ -10,7 +10,7 @@ import { Mensaje } from 'src/app/clases/mensaje';
 })
 export class ContacBoardComponent implements OnInit {
 
-  @Input() mensaje: Mensaje;
+  // @Input() mensaje: Mensaje;
 
   public mensajes: Mensaje[] = [];
 
@@ -39,8 +39,8 @@ export class ContacBoardComponent implements OnInit {
   }
 
   public updateMensaje() {
-    const { nombre, email, telefono, mensaje } = this.mensaje;
-    console.log({ nombre, email, telefono, mensaje });
+   // const { nombre, email, telefono, mensaje } = this.mensaje;
+   // console.log({ nombre, email, telefono, mensaje });
     /*
     this.mensajeSrvc.Update( this.mensaje.idMensaje, nombre, email, telefono, mensaje, 'no_leido')
     .then(
@@ -55,6 +55,7 @@ export class ContacBoardComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.listar();
   }
 
 }

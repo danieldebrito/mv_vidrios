@@ -23,6 +23,7 @@ export class MensajesService {
   }
 
   public Alta(
+    fecha: string,
     nombre: string,
     email: string,
     telefono: string,
@@ -30,6 +31,7 @@ export class MensajesService {
     estado: string
   ): Promise<object> {
     const request: object = {
+    fecha,
     nombre,
     email,
     telefono,
@@ -41,6 +43,7 @@ export class MensajesService {
 
   public Update(
     idMensaje: number,
+    fecha: string,
     nombre: string,
     email: string,
     telefono: string,
@@ -49,6 +52,7 @@ export class MensajesService {
     ): Promise<object> {
     const request: object = {
       idMensaje,
+      fecha,
       nombre,
       email,
       telefono,
@@ -56,5 +60,23 @@ export class MensajesService {
       estado
     };
     return this.miHttp.httpPostP('/mensajes/update', request);
+  }
+
+  getfecha() {
+    const fechaActual = new Date();
+    const dia = fechaActual.getDate().toString();
+    const mes = (fechaActual.getMonth() + 1).toString();
+    const anio = fechaActual.getFullYear().toString();
+    const hora = fechaActual.getHours().toString();
+    const minutos = fechaActual.getMinutes().toString();
+    const segundos = fechaActual.getSeconds().toString();
+
+    const fecha = dia + '/' + mes + '/' + anio;
+    const horario = hora + ':' + minutos + ':' + segundos;
+
+    const ret = fecha + ' - ' + horario ;
+
+    return ret;
+    // return fechaActual;
   }
 }
