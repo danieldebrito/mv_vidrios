@@ -13,6 +13,7 @@ export class ContacBoardComponent implements OnInit {
   // @Input() mensaje: Mensaje;
 
   public mensajes: Mensaje[] = [];
+  public mensajeMostrar: Mensaje;
 
   constructor( private mensajeSrvc: MensajesService) { }
 
@@ -52,6 +53,10 @@ export class ContacBoardComponent implements OnInit {
           console.error('ERROR DEL SERVIDOR', error);
         }
       );*/
+  }
+
+  public showMensaje(event) {
+    this.mensajeMostrar = event.mensaje;
   }
 
   ngOnInit(): void {

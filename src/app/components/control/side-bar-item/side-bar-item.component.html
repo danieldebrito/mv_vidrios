@@ -8,23 +8,18 @@
             </a>
         </th>
         <th>
-            <div>
-                <ul class="list-unstyled">
-                    <li>
-                        <button type="button" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>
-                        <button *ngIf="leido" type="button" class="btn btn-success btn-sm"><i class="fa fa-envelope"></i></button>
-                        <button *ngIf="noleido" type="button" class="btn btn-primary btn-sm"><i class="fa fa-envelope-open"></i></button>
-
-                    </li>
-                </ul>
+            <div class="pill-nav p-1">
+                <a *ngIf="leido" (click)="lanzarMensaje($event)"><i class="fa fa-envelope"></i></a>
+                <a *ngIf="noleido"><i class="fa fa-envelope-open"></i></a>
+                <a><i class="fa fa-trash"></i></a>
             </div>
         </th>
     </tr>
     <tr>
         <td>
             <a routerLink="\home">
-                    {{ mensaje.nombre }} <br> {{ mensaje.email }}
-                </a>
+                {{ mensaje.nombre }}
+            </a>
         </td>
     </tr>
 </table>

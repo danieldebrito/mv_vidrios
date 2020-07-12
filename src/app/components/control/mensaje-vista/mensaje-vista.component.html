@@ -1,16 +1,19 @@
 <div class="container mt-3">
-    <div class="row">
-        <div class="col-sm-6 form-group">
-            <input class="form-control" id="name" name="name" placeholder="Nombre" type="text" required>
+
+    <form [formGroup]="contactForm">
+        <div class="row">
+            <div class="col-sm-6 form-group">
+                <input class="form-control" type="text" id="nombre" placeholder="Nombre" name="nombre" formControlName="nombre" required>
+            </div>
+            <div class="col-sm-6 form-group">
+                <input class="form-control" type="email" id="email" placeholder="e-mail" name="email" formControlName="email" required>
+            </div>
         </div>
-        <div class="col-sm-6 form-group">
-            <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        <div class="row">
+            <div class="col-sm-6 form-group">
+                <input class="form-control" type="text" id="telefono" placeholder="telefono" name="telefono" formControlName="telefono" required>
+            </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-6 form-group">
-            <input class="form-control" id="name" name="name" placeholder="Telefono" type="text" required>
-        </div>
-    </div>
-    <textarea class="form-control" id="comments" name="comments" placeholder="¿En qué podemos ayudarte?" rows="5"></textarea><br>
+        <textarea class="form-control" id="mensaje" placeholder="mensaje" name="mensaje" formControlName="mensaje" placeholder="¿En qué podemos ayudarte?" rows="5" required></textarea><br>
+    </form>
 </div>

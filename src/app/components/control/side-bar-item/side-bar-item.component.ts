@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Mensaje } from 'src/app/clases/mensaje';
 
 @Component({
@@ -9,6 +9,7 @@ import { Mensaje } from 'src/app/clases/mensaje';
 export class SideBarItemComponent implements OnInit {
 
   @Input() mensaje;
+  @Output() pasarMensaje = new EventEmitter();
 
   public leido = false;
   public noleido = false;
@@ -22,6 +23,10 @@ export class SideBarItemComponent implements OnInit {
     } else {
       this.noleido = true;
     }
+  }
+
+  lanzarMensaje(event) {
+    this.pasarMensaje.emit({mensaje: this.mensaje});
   }
 
   ngOnInit(): void {
