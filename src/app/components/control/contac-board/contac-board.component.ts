@@ -13,7 +13,7 @@ export class ContacBoardComponent implements OnInit {
   // @Input() mensaje: Mensaje;
 
   public mensajes: Mensaje[] = [];
-  public mensajeMostrar: Mensaje;
+  public mensajeMostrar: Mensaje = {};
 
   constructor( private mensajeSrvc: MensajesService) { }
 
@@ -30,11 +30,12 @@ export class ContacBoardComponent implements OnInit {
   listar() {
     this.mensajeSrvc.Listar().subscribe(response => {
       this.mensajes = response;
+      this.mensajeMostrar = response[0];
     });
   }
 
-  eliminar(id: number) {
-    this.mensajeSrvc.Baja(id).then( () => {
+  eliminar(event) {
+    this.mensajeSrvc.Baja(event.id).then( () => {
       this.listar();
     });
   }

@@ -34,14 +34,13 @@ button:hover {
 
 .imgcontainer {
     text-align: center;
-    margin: 24px 0 12px 0;
-    background-color: black;
+    margin: 46px 0 12px 0;
+    background-color: #EE6C4D;
     padding: 3px;
 }
 
 img.avatar {
-    width: 40%;
-    border-radius: 50%;
+    width: 100%;
 }
 
 .container {

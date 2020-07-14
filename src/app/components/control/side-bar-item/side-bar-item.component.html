@@ -1,7 +1,7 @@
 <table>
     <tr>
         <th>
-            <a routerLink="\home">
+            <a (click)="lanzarMensaje($event)">
                 <div class="der">
                     {{ mensaje.fecha }}
                 </div>
@@ -10,14 +10,14 @@
         <th>
             <div class="pill-nav p-1">
                 <a *ngIf="leido" (click)="lanzarMensaje($event)"><i class="fa fa-envelope"></i></a>
-                <a *ngIf="noleido"><i class="fa fa-envelope-open"></i></a>
-                <a><i class="fa fa-trash"></i></a>
+                <a *ngIf="noleido" (click)="lanzarMensaje($event)"><i class="fa fa-envelope-open"></i></a>
+                <a><i class="fa fa-trash" (click)="lanzarBorrar($event)" ></i></a>
             </div>
         </th>
     </tr>
     <tr>
         <td>
-            <a routerLink="\home">
+            <a (click)="lanzarMensaje($event)">
                 {{ mensaje.nombre }}
             </a>
         </td>

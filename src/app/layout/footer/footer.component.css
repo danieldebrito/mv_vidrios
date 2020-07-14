@@ -156,3 +156,15 @@ a:visited {
     color: blue;
     text-decoration: none
 }
+
+.alignleft {
+    float: left;
+}
+
+.aligncenter {
+    float: left;
+}
+
+.alignright {
+    float: right;
+}

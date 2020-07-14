@@ -2,11 +2,12 @@
     <a href="javascript:void(0)" (click)="closeNav()">&#9776;  Cerrar Menu</a>
     <ul>
         <li *ngFor="let item of mensajes">
-            <app-side-bar-item (pasarMensaje)="showMensaje($event)" [mensaje]="item"></app-side-bar-item>
+            <app-side-bar-item (borrarItem)="eliminar($event)" (cerrarMenu)="closeNav()" (pasarMensaje)="showMensaje($event)" [mensaje]="item"></app-side-bar-item>
             <hr>
         </li>
     </ul>
 </div>
+
 
 <div id="main">
     <span style="font-size:30px;cursor:pointer" (click)="openNav()">&#9776; Abrir Menu</span>

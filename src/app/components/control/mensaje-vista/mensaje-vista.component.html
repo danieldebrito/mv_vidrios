@@ -1,19 +1,14 @@
 <div class="container mt-3">
 
-    <form [formGroup]="contactForm">
-        <div class="row">
-            <div class="col-sm-6 form-group">
-                <input class="form-control" type="text" id="nombre" placeholder="Nombre" name="nombre" formControlName="nombre" required>
-            </div>
-            <div class="col-sm-6 form-group">
-                <input class="form-control" type="email" id="email" placeholder="e-mail" name="email" formControlName="email" required>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-6 form-group">
-                <input class="form-control" type="text" id="telefono" placeholder="telefono" name="telefono" formControlName="telefono" required>
-            </div>
-        </div>
-        <textarea class="form-control" id="mensaje" placeholder="mensaje" name="mensaje" formControlName="mensaje" placeholder="¿En qué podemos ayudarte?" rows="5" required></textarea><br>
-    </form>
+    <div id="textbox">
+        <p class="alignleft"><b> 
+            {{ mensaje.nombre | titlecase }} </b> <a href="mailto:{{ mensaje.email }}">{{ mensaje.email }}</a>
+        </p>
+        <p class="alignright">
+            <b>{{ mensaje.fecha }}</b>
+        </p>
+    </div>
+    <div style="clear: both;">
+        {{ mensaje.mensaje }}
+    </div>
 </div>

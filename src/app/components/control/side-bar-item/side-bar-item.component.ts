@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { MensajesService } from 'src/app/services/mensajes.service';
+import { Observable } from 'rxjs';
 import { Mensaje } from 'src/app/clases/mensaje';
-
 @Component({
   selector: 'app-side-bar-item',
   templateUrl: './side-bar-item.component.html',
@@ -8,17 +9,19 @@ import { Mensaje } from 'src/app/clases/mensaje';
 })
 export class SideBarItemComponent implements OnInit {
 
-  @Input() mensaje;
+  @Input() mensaje: Mensaje = {};
   @Output() pasarMensaje = new EventEmitter();
+  @Output() cerrarMenu = new EventEmitter();
+  @Output() borrarItem = new EventEmitter();
+
 
   public leido = false;
   public noleido = false;
 
+  constructor(private mensajeSrvc: MensajesService) { }
 
-  constructor() { }
-
-  public EstadoLeido(mensaje: Mensaje) {
-    if ( mensaje.estado === 'no_leido' ){
+  public EstadoLeidoNoLeido(mensaje: Mensaje) {
+    if (mensaje.estado === 'no_leido') {
       this.leido = true;
     } else {
       this.noleido = true;
@@ -26,11 +29,20 @@ export class SideBarItemComponent implements OnInit {
   }
 
   lanzarMensaje(event) {
-    this.pasarMensaje.emit({mensaje: this.mensaje});
+    this.pasarMensaje.emit({ mensaje: this.mensaje });
+    this.lanzarcerrarMenu();
+  }
+
+  lanzarcerrarMenu() {
+    this.cerrarMenu.emit();
+  }
+
+  lanzarBorrar(event) {
+    this.borrarItem.emit({ id: this.mensaje.idMensaje });
   }
 
   ngOnInit(): void {
-    this.EstadoLeido(this.mensaje);
+    this.EstadoLeidoNoLeido(this.mensaje);
   }
 
 }
