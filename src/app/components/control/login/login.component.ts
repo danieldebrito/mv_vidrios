@@ -27,6 +27,7 @@ export class LoginComponent implements OnInit {
     try {
       const logeo = await this.authSvc.Loguear(this.loginForm.value);
       if (logeo) {
+        this.authSvc.isLogged = true;
         this.routes.navigate(['/cpanel']);
       } else {
         this.routes.navigate(['/errorLogin']);

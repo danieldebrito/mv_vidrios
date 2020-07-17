@@ -7,14 +7,14 @@ import { BaseHTTPService } from 'src/app/services/base-http.service';
 })
 export class AuthService {
 
-  public identity: Login;
+  public isLogged = false;
+  public identity;
 
   constructor(public miHttp: BaseHTTPService) { }
 
   Loguear(dataLogin: Login) {
     const request: JSON = JSON.parse(JSON.stringify(dataLogin));
     this.setIdentityLocalStorage(dataLogin);
-
     return this.miHttp.httpPostP('/user/login', request);
   }
 

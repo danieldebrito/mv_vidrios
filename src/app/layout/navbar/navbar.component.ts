@@ -10,19 +10,21 @@ import { MensajesService } from 'src/app/services/mensajes.service';
 })
 export class NavbarComponent implements OnInit {
 
-
-  public identity: Login;
+  public islogged;
+  public identity;
   public cantNoLeidos: number;
 
   constructor(private mensajeSrvc: MensajesService, private authSvc: AuthService ) { }
 
   ngOnInit(): void {
+    this.islogged = this.authSvc.isLogged;
     this.identity = this.authSvc.getIdentityLocalStorage();
     this.listar();
   }
 
   logout() {
     this.authSvc.logout();
+    this.identity = undefined;
   }
 
   listar() {
