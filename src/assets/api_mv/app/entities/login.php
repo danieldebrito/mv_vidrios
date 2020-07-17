@@ -2,13 +2,13 @@
 class login
 {
 	public $usuario;
-	public $clave;
+	public $password;
 
-	public function Login($usuario, $clave) {
+	public function Login($usuario, $password) {
 		$objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso();
 
         $consulta = $objetoAccesoDato->RetornarConsulta(
-			"SELECT * FROM `usuarios` WHERE `usuario`= '".$usuario."' AND `clave`= '".$clave."'"
+			"SELECT * FROM `usuarios` WHERE `usuario`= '".$usuario."' AND `password`= '".$password."'"
 		);
 
 		$consulta->execute();

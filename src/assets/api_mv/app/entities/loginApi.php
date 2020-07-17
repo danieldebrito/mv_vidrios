@@ -8,12 +8,12 @@ class loginApi extends login {
         $json = $request->getBody();
 		$data = json_decode($json, true);
 
-		$retorno = cliente::Login($data["usuario"], $data["clave"]);
+		$retorno = cliente::Login($data["usuario"], $data["password"]);
 
         if ($retorno["usuario"] != "") {
             $respuesta = array("Estado" => "OK", "Mensaje" => "Logueado Exitosamente", "result" => $retorno["true"]);
         } else {
-            $respuesta = array("Estado" => "ERROR", "Mensaje" => "Usuario o Clave Invalidos");
+            $respuesta = array("Estado" => "ERROR", "Mensaje" => "Usuario o password Invalidos");
         }
         $newResponse = $response->withJson($respuesta, 200);
         return $newResponse;

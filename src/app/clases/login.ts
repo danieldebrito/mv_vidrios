@@ -1,6 +1,7 @@
 export class Login {
     constructor(
-        public idCliente: string,
-        public clave: string,
+        public usuario: string,
+        public password: string,
+        public isLogged?: boolean,
     ) { }
 }

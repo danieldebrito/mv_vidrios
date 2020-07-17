@@ -41,6 +41,23 @@ export class SideBarItemComponent implements OnInit {
     this.borrarItem.emit({ id: this.mensaje.idMensaje });
   }
 
+  public updateMensajeLeido() {
+    const { idMensaje, fecha, nombre, email, telefono, mensaje, estado } = this.mensaje;
+
+    this.mensajeSrvc.Update(
+      idMensaje, fecha, nombre, email, telefono, mensaje, 'leido').then(
+        response => {
+          // this.listar();
+          this.leido = true;
+        }
+      )
+      .catch(
+        error => {
+          console.error('ERROR DEL SERVIDOR', error);
+        }
+      );
+  }
+
   ngOnInit(): void {
     this.EstadoLeidoNoLeido(this.mensaje);
   }

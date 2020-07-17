@@ -9,7 +9,7 @@
         </th>
         <th>
             <div class="pill-nav p-1">
-                <a *ngIf="leido" (click)="lanzarMensaje($event)"><i class="fa fa-envelope"></i></a>
+                <a *ngIf="leido" (click)="updateMensajeLeido()" (click)="lanzarMensaje($event)"><i class="fa fa-envelope"></i></a>
                 <a *ngIf="noleido" (click)="lanzarMensaje($event)"><i class="fa fa-envelope-open"></i></a>
                 <a><i class="fa fa-trash" (click)="lanzarBorrar($event)" ></i></a>
             </div>

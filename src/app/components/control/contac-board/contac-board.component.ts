@@ -10,50 +10,56 @@ import { Mensaje } from 'src/app/clases/mensaje';
 })
 export class ContacBoardComponent implements OnInit {
 
-  // @Input() mensaje: Mensaje;
-
   public mensajes: Mensaje[] = [];
   public mensajeMostrar: Mensaje = {};
 
-  constructor( private mensajeSrvc: MensajesService) { }
+  constructor(private mensajeSrvc: MensajesService) { }
 
   public openNav() {
     document.getElementById('mySidenav').style.width = '350px';
     document.getElementById('main').style.marginLeft = '350px';
+    this.listar();
   }
 
   public closeNav() {
     document.getElementById('mySidenav').style.width = '0';
     document.getElementById('main').style.marginLeft = '0';
+    this.listar();
   }
 
   listar() {
     this.mensajeSrvc.Listar().subscribe(response => {
       this.mensajes = response;
+      return response;
+    });
+  }
+
+  iniciarMensajero() {
+    this.mensajeSrvc.Listar().subscribe(response => {
       this.mensajeMostrar = response[0];
     });
   }
 
   eliminar(event) {
-    this.mensajeSrvc.Baja(event.id).then( () => {
+    this.mensajeSrvc.Baja(event.id).then(() => {
       this.listar();
     });
   }
 
-  public updateMensaje() {
-   // const { nombre, email, telefono, mensaje } = this.mensaje;
-   // console.log({ nombre, email, telefono, mensaje });
-    /*
-    this.mensajeSrvc.Update( this.mensaje.idMensaje, nombre, email, telefono, mensaje, 'no_leido')
-    .then(
-      response => {
-      }
-    )
+  public updateMensajeLeido() {
+    const { idMensaje, fecha, nombre, email, telefono, mensaje, estado } = this.mensajeMostrar;
+
+    this.mensajeSrvc.Update(
+      idMensaje, fecha, nombre, email, telefono, mensaje, 'leido').then(
+        response => {
+          this.listar();
+        }
+      )
       .catch(
         error => {
           console.error('ERROR DEL SERVIDOR', error);
         }
-      );*/
+      );
   }
 
   public showMensaje(event) {
@@ -62,6 +68,6 @@ export class ContacBoardComponent implements OnInit {
 
   ngOnInit(): void {
     this.listar();
+    this.iniciarMensajero();
   }
-
 }

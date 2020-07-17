@@ -14,6 +14,9 @@ export class BaseHTTPService {
 
     // localhost
     this.urlBase = ' http://localhost/api_mv/app/index.php';
+
+    // towebs
+    // this.urlBase = 'http://mvvidrios.com.ar/api_mv/app/index.php';
   }
 
   public httpGetP( url: string) {
