@@ -13,10 +13,10 @@ export class BaseHTTPService {
     // this.urlBase = 'http://juntasmeyro.000webhostapp.com/api/index.php';
 
     // localhost
-    this.urlBase = ' http://localhost/api_mv/app/index.php';
+    // this.urlBase = ' http://localhost/api_mv/app/index.php';
 
     // towebs
-    // this.urlBase = 'http://mvvidrios.com.ar/api_mv/app/index.php';
+    this.urlBase = 'http://mvvidrios.com.ar/api_mv/app/index.php';
   }
 
   public httpGetP( url: string) {
