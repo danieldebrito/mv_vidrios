@@ -52,7 +52,7 @@
 }
 
 .nav-link {
-    color: #EE6C4D !important;
+    color: #FAC86E !important;
     font-weight: bold;
 }
 
@@ -62,4 +62,11 @@ a:hover {
 
 .active {
     background-color: #293241;
+}
+
+.logo {
+    padding-top: 4px;
+    /*padding-right: 0px;*/
+    padding-bottom: 4px;
+    /*padding-left: 0px;*/
 }
