@@ -20,6 +20,7 @@ import { SideBarItemComponent } from './components/control/side-bar-item/side-ba
 import { LoginComponent } from './components/control/login/login.component';
 import { ErrorLoginComponent } from './components/control/error-login/error-login.component';
 import { GraciasComponent } from './components/control/gracias/gracias.component';
+import { CarouselComponent } from './components/home/carousel/carousel.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,6 +38,7 @@ import { GraciasComponent } from './components/control/gracias/gracias.component
     LoginComponent,
     ErrorLoginComponent,
     GraciasComponent,
+    CarouselComponent,
   ],
   imports: [
     BrowserModule,
